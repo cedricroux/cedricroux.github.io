@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body onload="startGame();">
+    <h1>Welcome to Tic-Tac-Toe!</h1>
+
+    <div id="message"></div>
+
+    <table>
+      <tr>
+        <td id="s1" class="square" onclick="nextMove(this);"></td>
+        <td id="s2" class="square" onclick="nextMove(this);"></td>
+        <td id="s3" class="square" onclick="nextMove(this);"></td>
+      </tr>
+      <tr>
+        <td id="s4" class="square" onclick="nextMove(this);"></td>
+        <td id="s5" class="square" onclick="nextMove(this);"></td>
+        <td id="s6" class="square" onclick="nextMove(this);"></td>
+      </tr>
+      <tr>
+        <td id="s7" class="square" onclick="nextMove(this);"></td>
+        <td id="s8" class="square" onclick="nextMove(this);"></td>
+        <td id="s9" class="square" onclick="nextMove(this);"></td>
+      </tr>
+    </table>
+
+    <div id="l-sidebar">
+      <h2>Player 1 (X)</h2>
+      <div id="player1Name">
+        <input id="player1Input" type="text" name="player1Name">
+      </div>
+      <hr>
+      <h2>Player 2 (O)</h2>
+      <div id="player2Name">
+        <input id="player2Input" type="text" name="player2Name">
+      </div>
+      <hr>
+      <button id="submitName">Submit</button>
+    </div>
+    <div id="r-sidebar">
+      <div id="currentScore">
+        <h2>Current Score</h2>
+        <div id="scorePlayer1Name"></div>
+        <div id="scorePlayer2Name"></div>
+      </div>
+    </div>
+
+    <div id="buttonUp"></div>
+    <button id="resetButton">Reset Board</button>
+    <button id="restartButton">Restart Game</button>
+
+  </body>
+</html>

@@ -1,0 +1,78 @@
+/** {
+border: 1px solid green;
+}*/
+
+body {
+  font-family: Helvetica;
+  text-align: center;
+  margin: 0 auto;
+}
+
+table {
+  border: 1;
+  margin: 0 auto;
+  background:#333;
+  color: white;
+  padding: 1em;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 50pt;
+  font-weight: bold;
+  font-family: Helvetica;
+  border: 1px solid #555;
+}
+
+#message {
+  font-size: 15pt;
+  padding-bottom: 5px;
+}
+
+#buttonUp {
+  height: 50px;
+}
+
+#reset-game {
+  font-size: 9pt;
+  background:#555;
+  border:1px solid #333;
+  padding: 8px 18px;
+  color:#FFF;
+  text-transform:uppercase;
+}
+
+#scoreDiv {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  right: 250px;
+  border: 1px dotted black;
+  border-radius: 10px;
+}
+
+#l-sidebar {
+  width: 200px;
+  height: 255px;
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  background-color: #2f9c95;
+}
+#r-sidebar {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  right: 250px;
+  background-color: #2f9c95;
+}
+
+#submitName {
+  position: absolute;
+  top: 215px;
+  left: 75px;
+}

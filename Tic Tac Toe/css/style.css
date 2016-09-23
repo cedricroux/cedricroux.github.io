@@ -64,7 +64,7 @@ table {
 }
 #r-sidebar {
   width: 200px;
-  height: 200px;
+  height: 255px;
   position: absolute;
   top: 150px;
   right: 250px;

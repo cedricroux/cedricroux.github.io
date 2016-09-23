@@ -1,3 +1,12 @@
+// _______  ___   _______    _______  _______  _______    _______  _______  _______
+// |       ||   | |       |  |       ||   _   ||       |  |       ||       ||       |
+// |_     _||   | |       |  |_     _||  |_|  ||       |  |_     _||   _   ||    ___|
+//  |   |  |   | |       |    |   |  |       ||       |    |   |  |  | |  ||   |___
+//  |   |  |   | |      _|    |   |  |       ||      _|    |   |  |  |_|  ||    ___|
+//  |   |  |   | |     |_     |   |  |   _   ||     |_     |   |  |       ||   |___
+//  |___|  |___| |_______|    |___|  |__| |__||_______|    |___|  |_______||_______|
+
+
 $(document).ready(function () {
   $("#submitName").on("click", function () {
     player1Name = $("#player1Input").val();
@@ -14,31 +23,19 @@ $(document).ready(function () {
     $("#scorePlayer2Name").empty();
   });
 
+  // Every time the board resets, it restarts the game and keeps count of score.
   $("#resetButton").click(function () {
+    if (document.winner == "X") {
+      player1Score++;
+      $("#scorePlayer1Result").html(player1Score);
+    } else {
+      player2Score++;
+      $("#scorePlayer2Result").html(player2Score);
+    }
     startGame();
   });
 });
 
-
-
-var finish = function (p, highlight) {
-  if (typeof p != "undefined") {
-    $("#status").text(p + " is the winner!");
-
-  } else {
-    $("#status").text("The game ended with a draw.");
-  }
-  turn = "";
-  if (typeof hightlight != "undefined") {
-    highlightWinner(highlight);
-  }
-  if (p == "X") xwins++;
-  else if (p == "O") owins++;
-  $("#xwins").text(xwins);
-  $("#owins").text(xwins);
-};
-
-var keepScore = 0;
 var player1Score = 0;
 var player2Score = 0;
 
@@ -48,7 +45,6 @@ var startGame = function () {
   for (var i = 1; i <= 9; i += 1) {
     clearBox(i);
   }
-
   // Randomize who gets to start.
   if (Math.random() < 0.5) {
     document.turn = "O";
@@ -64,7 +60,7 @@ var setMessage = function (msg) {
   document.getElementById("message").innerText = msg;
 };
 
-// Let's the player move if square is free.
+// Let's the player move if square is free && is no winner.
 var nextMove = function (square) {
   if (document.winner != false) {
     setMessage(document.winner + " already won the game.");
@@ -107,7 +103,7 @@ var checkForWinner = function (move) {
   return result;
 };
 
-// Calls on three squares for later comparison.
+// Calls on three squares for comparison.
 var checkRow = function (a, b, c, move) {
   var result = false;
   if (getBox(a) == move && getBox(b) == move && getBox(c) == move) {
@@ -116,7 +112,7 @@ var checkRow = function (a, b, c, move) {
   return result;
 };
 
-//
+// Get a box based on a number. Making use of the square's IDs.
 var getBox = function (number) {
   return document.getElementById("s" + number).innerText;
 };

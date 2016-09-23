@@ -1,57 +1,60 @@
-# Markdown Intro
+# Tic Tac Toe
 
-We can have **bold** text and *italic* text. Underscores __also__ _work_.
+## History
 
-[Link to GA](http://generalassemb.ly/)
+https://en.wikipedia.org/wiki/Tic-tac-toe
 
-http://yahoo.com/
+## Technologies used
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+## Approach
+1. Mapped out all the possible wins on paper
+2.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+### How to play
+1. one
+2. two
+3. three
 
-## More Details
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Installation
+- [ ]
+- [ ]
+- [ ]
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-### This is nicer then HTML
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Lists
-### Unordered
-* Groucho
-* Harpo
-* Chico
+## Possible wins
+In the example below we will show you all the possible wins for Player "X".
+#### 1. Rows
+First row:
 
-### Ordered
-1. Groucho
-2. Harpo
-3. Chico
+![row 1 win](images/row1.jpg)
 
-![Bill Murray](http://fillmurray.com/300/400)
+Second row:
 
-As a wise man once said:
+![row 2 win](images/row2.jpg)
 
-> ALL YOUR BASE ARE BELON TO US
+Third row:
 
-Javascript has many quirks such as `Nan`
+![row 3 win](images/row3.jpg)
 
-Here is a function:
-```javascript
-var foo = function () {
+#### 2. Columns
+First column:
 
-};
-```
+![column 1 win](images/column1.jpg)
 
-## Tasks
-- [x] Kill all humans
-- [ ] Go to margaritas
-- [ ] Kill all ~~UX students~~
+Second column:
 
-## Tables
-Brothers | Instruments
----------|------------
-Groucho  | Harpo
-Harpo    | Harpo
-Chico    | Piano
+![column 2 win](images/column2.jpg)
+
+Third column:
+
+![column 3 win](images/column3.jpg)
+
+#### 3. Diagonals
+First diagonal:
+
+![diagonal 1 win](images/diagonal1.jpg)
+
+Second diagonal:
+
+![diagonal 2 win](images/diagonal2.jpg)
